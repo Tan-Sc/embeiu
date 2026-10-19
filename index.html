@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a0b2e" />
+  <title>Dành riêng cho em, Thoa Thoa 🌷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Night sky layers (filled by script.js) -->
+  <div class="sky" aria-hidden="true">
+    <div class="moon"></div>
+    <div id="stars"></div>
+  </div>
+  <div id="particles" aria-hidden="true"></div>
+  <div id="floating-hearts" aria-hidden="true"></div>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- Intro -->
+    <section id="intro" class="intro">
+      <p class="intro-small">một món quà nhỏ</p>
+      <h1 class="intro-title">Dành riêng cho em,<br /><span>Thoa Thoa 🌷</span></h1>
+      <button id="open-btn" class="btn" type="button">Nhấn vào đây nè, em bé 💌</button>
+    </section>
+
+    <!-- Love letter -->
+    <section id="letter" class="letter" aria-live="polite">
+      <div class="letter-card" id="letter-card" role="button" tabindex="0" aria-label="Lá thư tình, chạm để nhận trái tim">
+        <div class="letter-seal">💗</div>
+        <p class="letter-text" id="letter-text"></p>
+        <p class="signature" id="signature">Made with love, just for you ❤️</p>
+        <p class="hint" id="hint">chạm vào lá thư nhé 💗</p>
+      </div>
+      <div class="letter-actions">
+        <button id="gallery-btn" class="btn btn-small" type="button">Bó hoa kỷ niệm 💐</button>
+        <button id="replay-btn" class="btn btn-small btn-ghost" type="button">Xem lại vườn hoa 🌷</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Garden -->
+  <div class="garden" id="garden" aria-hidden="true">
+    <div class="ground"></div>
+  </div>
+
+  <!-- Memory bouquet (photos), opened from the letter -->
+  <div class="gallery" id="gallery" aria-hidden="true">
+    <button class="g-close" id="g-close" type="button" aria-label="Đóng">✕</button>
+    <h2 class="g-title">Bó hoa kỷ niệm của em 💐</h2>
+    <div class="g-stage" id="g-stage"></div>
+    <p class="g-hint">chạm vào từng bông hoa nhé 💗</p>
+  </div>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-nav prev" id="lb-prev" type="button" aria-label="Ảnh trước">‹</button>
+    <img id="lb-img" alt="Kim Thoa" />
+    <button class="lb-nav next" id="lb-next" type="button" aria-label="Ảnh sau">›</button>
+  </div>
+
+  <!-- Background music (YouTube player, hidden) -->
+  <div id="yt-wrap" aria-hidden="true"><div id="yt-player"></div></div>
+  <button id="music-btn" class="music-btn" type="button" aria-label="Bật/tắt nhạc" hidden>🎵</button>
+
+  <script src="script.js"></script>
+  <script src="https://www.youtube.com/iframe_api" async></script>
+</body>
+</html>
